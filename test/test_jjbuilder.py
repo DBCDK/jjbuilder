@@ -13,3 +13,4 @@ def testGenerateEmptyJob():
 
 def testGenerateDescribedJob():
   assertJob({'description': 'Some description of the job.'}, 'test/jobs/description.xml')
+  assertJob({'description': '<h2>Some description containing a tag</h2> of the job & some "HTML entities" which isn\'t always escaped.'}, 'test/jobs/description_htmlentities.xml')
