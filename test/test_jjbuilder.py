@@ -17,3 +17,6 @@ def testGenerateDescribedJob():
 
 def testAssignedNode():
   assertJob({'assignedNode': 'guesstimate-head'}, 'assignednode.xml')
+
+def testDisableJob():
+  assertJob({'disabled': 'true'}, 'disabledjob.xml')
