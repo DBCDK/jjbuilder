@@ -14,4 +14,5 @@ def generate_job(data):
   template_file.close()
   output = StringIO()
   template.expand(context, output, outputEncoding='utf-8')
-  return output.getvalue()
+  lines = output.getvalue().splitlines()
+  return '\n'.join(filter(str.strip, lines))

@@ -5,7 +5,9 @@
   <keepDependencies>false</keepDependencies>
   <properties/>
   <scm class="hudson.scm.NullSCM"/>
-  <canRoam>true</canRoam>
+  <assignedNode tal:omit-tag="not:exists:assignedNode" tal:content="assignedNode"/>
+  <canRoam tal:condition="not:exists:assignedNode">true</canRoam>
+  <canRoam tal:condition="exists:assignedNode">false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
